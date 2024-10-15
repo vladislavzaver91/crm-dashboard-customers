@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+		<link href="/css/styles.css" rel="stylesheet" />
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<main class="main">
+				<!-- sidebar -->
+				<div class="sidebar">
+					<div class="sidebar__logo">
+						<img src="./images/logo-icon.png" alt="Logo Icon" />
+						<h1 class="sidebar__logo-title">Dashboard<span class="sidebar__logo-title_text">v.01</span></h1>
+					</div>
+					<button class="sidebar-menu-btn" id="menuToggleBtn">
+						<svg class="sidebar-menu-icon" id="menuIcon" width="24" height="24">
+							<use href="./images/icons.svg#icon-chevron-right"></use>
+						</svg>
+					</button>
+					<nav class="sidebar__nav">
+						<ul class="sidebar__nav-list">
+							<li class="sidebar__nav-list-item">
+								<svg class="sidebar__nav-list-item-icon_stroke" width="24" height="24">
+									<use href="./images/icons.svg#icon-key-square"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Dashboard</a>
+							</li>
+							<li class="sidebar__nav-list-item">
+								<svg class="sidebar__nav-list-item-icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-square"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Product</a>
+								<svg class="sidebar__nav-list-item-arrow" width="16" height="16">
+									<use href="./images/icons.svg#icon-chevron-right"></use>
+								</svg>
+							</li>
+							<li class="sidebar__nav-list-item sidebar__nav-list-item--active">
+								<svg class="sidebar__nav-list-item-icon_stroke" width="24" height="24">
+									<use href="./images/icons.svg#icon-user-square"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Customers</a>
+								<svg class="sidebar__nav-list-item-arrow" width="16" height="16">
+									<use href="./images/icons.svg#icon-chevron-right"></use>
+								</svg>
+							</li>
+							<li class="sidebar__nav-list-item">
+								<svg class="sidebar__nav-list-item-icon_stroke" width="24" height="24">
+									<use href="./images/icons.svg#icon-wallet-money"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Income</a>
+								<svg class="sidebar__nav-list-item-arrow" width="16" height="16">
+									<use href="./images/icons.svg#icon-chevron-right"></use>
+								</svg>
+							</li>
+							<li class="sidebar__nav-list-item">
+								<svg class="sidebar__nav-list-item-icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-discount-shape"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Promote</a>
+								<svg class="sidebar__nav-list-item-arrow" width="16" height="16">
+									<use href="./images/icons.svg#icon-chevron-right"></use>
+								</svg>
+							</li>
+							<li class="sidebar__nav-list-item">
+								<svg class="sidebar__nav-list-item-icon" width="24" height="24">
+									<use href="./images/icons.svg#icon-message-question"></use>
+								</svg>
+								<a href="#" class="sidebar__nav-list-item-link">Help</a>
+								<svg class="sidebar__nav-list-item-arrow" width="16" height="16">
+									<use href="./images/icons.svg#icon-chevron-right"></use>
+								</svg>
+							</li>
+						</ul>
+					</nav>
+					<!-- user-sidebar-bottom -->
+					<div class="user">
+						<img src="./images/user-photo.png" alt="User Photo" class="user__photo" width="42" height="42" />
+						<div class="user__info">
+							<h3 class="user__info-title">Evano</h3>
+							<p class="user__info-text">Project Manager</p>
+						</div>
+					</div>
+				</div>
+				<!-- customers -->
+				<div class="section">
+					<div class="section__title-wrapper">
+						<h2 class="section__title">Hello Evano 👋🏼,</h2>
+					</div>
+					<!-- customers-table -->
+					<div class="customers">
+						<div class="customers__top-thumb">
+							<div class="customers__title-wrapper">
+								<h3 class="customers__title">All Customers</h3>
+								<p class="customers__text">Active Members</p>
+							</div>
+							<div class="customers__search-container">
+								<svg class="customers__search-icon_stroke" width="24" height="24">
+									<use href="./images/icons.svg#icon-search"></use>
+								</svg>
+								<input class="search__search-input" type="text" placeholder="Search" />
+							</div>
+						</div>
+
+						<!-- table -->
+						<div class="customers__table-container">
+							<table class="customers__table">
+								<thead>
+									<tr>
+										<th>Customer Name</th>
+										<th>Company</th>
+										<th>Phone Number</th>
+										<th>Email</th>
+										<th>Country</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody id="customerTableBody">
+									<!-- customer data will be added via JavaScript -->
+								</tbody>
+							</table>
+						</div>
+
+						<div class="customers__bottom-thumb">
+							<p class="customers__bottom-thumb__total-data-text">Showing data 1 to 8 of 256K entries</p>
+
+							<!-- pagination -->
+							<div class="customers__pagination">
+								<button class="customers__pagination-btn" id="prevPageBtn"><</button>
+								<div class="customers__pagination-pages" id="paginationPages"></div>
+								<button class="customers__pagination-btn" id="nextPageBtn">></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
